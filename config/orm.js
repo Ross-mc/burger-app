@@ -9,17 +9,17 @@ const orm = {
             cb(res);
         })
     },
-    getAll: function(cb){
-        const queryString = "SELECT * FROM burgers;";
+    getAll: function(table, cb){
+        const queryString = `SELECT * FROM ${table};`;
         this.dbQuery(queryString, cb);
     },
     
-    create: function (burger, cb){
-        const queryString = `INSERT INTO burgers (burger_name) VALUES ("${burger}");`;
+    create: function (table, value, cb){
+        const queryString = `INSERT INTO ${table} (burger_name) VALUES ("${value}");`;
         this.dbQuery(queryString, cb);
     },
-    update: function (burger, cb){
-        const queryString = `UPDATE burgers SET eaten = true WHERE burger_name = "${burger}"`;
+    update: function (table, valToUpdate, newValue, condition, conditionalCheck, cb){
+        const queryString = `UPDATE ${table} SET ${valToUpdate} = ${newValue} WHERE ${condition} = "${conditionalCheck}"`;
         this.dbQuery(queryString, cb);
     }
 };
