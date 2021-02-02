@@ -14,12 +14,12 @@ const orm = {
         this.dbQuery(queryString, cb);
     },
     
-    create: function (table, value, cb){
-        const queryString = `INSERT INTO ${table} (burger_name) VALUES ("${value}");`;
+    create: function (table, column,  value, cb){
+        const queryString = `INSERT INTO ${table} (${column}) VALUES ("${value}");`;
         this.dbQuery(queryString, cb);
     },
-    update: function (table, valToUpdate, newValue, condition, conditionalCheck, cb){
-        const queryString = `UPDATE ${table} SET ${valToUpdate} = ${newValue} WHERE ${condition} = "${conditionalCheck}"`;
+    update: function (table, column, newValue, condition, conditionalCheck, cb){
+        const queryString = `UPDATE ${table} SET ${column} = ${newValue} WHERE ${condition} = "${conditionalCheck}"`;
         this.dbQuery(queryString, cb);
     }
 };
