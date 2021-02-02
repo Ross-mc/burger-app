@@ -8,10 +8,10 @@ const router = express.Router();
 
 //default route
 router.get('/', (req, res) => {
-    const test = {
-        test: 'hello'
-    }
-    res.render("index", test)
+
+    burger.getAll(burgersArr => {
+        res.render("index", {burgersArr})
+    })
 });
 
 module.exports = router;
