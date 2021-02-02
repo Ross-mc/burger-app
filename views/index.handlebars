@@ -1,3 +1,11 @@
 <h1>Burgers!</h1>
 
-<h2>{{test}}</h2>
+<ul>
+    {{#each burgers}}
+        <li>{{burger_name}}
+            {{#unless eaten}}
+                <button data-id={{id}} class="eatBtn">Eat me!</button>
+            {{/unless}}
+        </li>
+    {{/each}}
+</ul>

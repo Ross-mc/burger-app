@@ -9,8 +9,8 @@ const router = express.Router();
 //default route
 router.get('/', (req, res) => {
 
-    burger.getAll(burgersArr => {
-        res.render("index", {burgersArr})
+    burger.getAll(burgers => {
+        res.render("index", {burgers})
     })
 });
 
