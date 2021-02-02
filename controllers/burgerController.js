@@ -12,4 +12,6 @@ router.get('/', (req, res) => {
         test: 'hello'
     }
     res.render("index", test)
-})
+});
+
+module.exports = router;
