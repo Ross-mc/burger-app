@@ -1,3 +1,4 @@
+//adding event listeners for all eatBtns to dynamically send a put request to server
 const eatBtns = document.querySelectorAll(".eatBtn");
 
 const eatBtnClickHandler = event => {
@@ -16,9 +17,22 @@ const eatBtnClickHandler = event => {
             alert('Error connecting to Database')
         }
     })
-}
-
+};
 
 eatBtns.forEach(btn => {
     btn.addEventListener("click", eatBtnClickHandler)
-})
+});
+
+//handling post requests
+
+const orderBtn = document.querySelector("#orderBtn");
+const burgerInput = document.querySelector("#burgerName");
+
+
+const orderBtnClickHandler = (event) => {
+    event.preventDefault();
+    const burgerName = burgerInput.value;
+    console.log(burgerName);
+}
+
+orderBtn.addEventListener("click", orderBtnClickHandler)
