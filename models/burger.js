@@ -9,7 +9,7 @@ const burger = {
         orm.create('burgers', 'burger_name', burger, cb);
     },
     update: function(burgerId, cb){
-        orm.update('burgers', 'eaten', true, "id", burgerId)
+        orm.update('burgers', 'eaten', true, "id", burgerId, cb)
     }
 };
 

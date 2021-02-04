@@ -10,7 +10,11 @@ const eatBtnClickHandler = event => {
             'Content-Type': 'application/json'
         }
     }).then(response => {
-        console.log(response)
+        if (response.ok === true){
+            location.reload('/')
+        } else {
+            alert('Error connecting to Database')
+        }
     })
 }
 
