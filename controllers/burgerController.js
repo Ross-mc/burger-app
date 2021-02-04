@@ -14,4 +14,12 @@ router.get('/', (req, res) => {
     })
 });
 
+//update route
+
+router.put('/api/burger/:id', (req, res) => {
+    const id = req.params.id;
+    console.log('The id received at the server was: ', id);
+    res.json({testMessage: `${id} received at the server and send back to front end`})
+})
+
 module.exports = router;
