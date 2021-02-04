@@ -32,7 +32,7 @@ const burgerInput = document.querySelector("#burgerName");
 const orderBtnClickHandler = (event) => {
     event.preventDefault();
     const burgerName = burgerInput.value;
-    fetch(`/api/burger/`, {
+    fetch(`/api/burger`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
