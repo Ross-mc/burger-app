@@ -32,7 +32,20 @@ const burgerInput = document.querySelector("#burgerName");
 const orderBtnClickHandler = (event) => {
     event.preventDefault();
     const burgerName = burgerInput.value;
-    console.log(burgerName);
+    fetch(`/api/burger/`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ burgerName })
+    }).then(response => {
+        if (response.ok === true){
+            location.reload('/')
+        } else {
+            alert('Error connecting to Database')
+        }
+    })
 }
 
 orderBtn.addEventListener("click", orderBtnClickHandler)

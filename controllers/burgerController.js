@@ -24,6 +24,13 @@ router.put('/api/burger/:id', (req, res) => {
         }
         res.status(200).end();
     })
+});
+
+//create route
+
+router.post('/api/burger', (req, res) => {
+    const { burgerName } = req.body;
+    console.log('The request from the server is: ', burgerName)
 })
 
 module.exports = router;
