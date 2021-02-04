@@ -9,3 +9,9 @@
         </li>
     {{/each}}
 </ul>
+
+<form action="/api/burger" method="POST">
+    <label for="burgerName">Order a burger:</label>
+    <input type="text" placeholder="Enter the name of your Burger" name="burgerName" id="burgerName">
+    <button id="orderBtn" type="submit">Order your burger!</button>
+</form>
