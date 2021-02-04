@@ -4,7 +4,7 @@
 <ul>
     {{#each availableBurgers}}
         <li>{{burger_name}}
-            <button data-id={{id}} class="eatBtn">Eat me!</button>
+            <button data-id={{id}} data-eaten="true" class="eatBtn">Eat me!</button>
         </li>
     {{/each}}
 </ul>
@@ -13,7 +13,7 @@
 <ul>
     {{#each eatenBurgers}}
         <li>{{burger_name}}
-            <button data-id={{id}} class="eatBtn">Order again!</button>
+            <button data-id={{id}} data-eaten="false" class="eatBtn">Order again!</button>
         </li>
     {{/each}}
 </ul>

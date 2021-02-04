@@ -13,14 +13,14 @@ router.get('/', (req, res) => {
         const availableBurgers = burgers.filter(burger => !burger.eaten);
         const eatenBurgers = burgers.filter(burger => burger.eaten);
         res.render("index", {availableBurgers, eatenBurgers})
-    })
+    });
 });
 
 //update route
 
 router.put('/api/burger/:id', (req, res) => {
-    const id = req.params.id;
-    burger.update(id, (result) => {
+    const { id, bool } = req.body;
+    burger.update(id, bool, (result) => {
         if (result.changedRows === 0){
             return res.status(404).end();
         }
