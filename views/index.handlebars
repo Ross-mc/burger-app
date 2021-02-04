@@ -1,14 +1,24 @@
 <h1>Burgers!</h1>
 
+<h2>Available Burgers!</h2>
 <ul>
-    {{#each burgers}}
+    {{#each availableBurgers}}
         <li>{{burger_name}}
-            {{#unless eaten}}
-                <button data-id={{id}} class="eatBtn">Eat me!</button>
-            {{/unless}}
+            <button data-id={{id}} class="eatBtn">Eat me!</button>
         </li>
     {{/each}}
 </ul>
+
+<h2>Previous Orders</h2>
+<ul>
+    {{#each eatenBurgers}}
+        <li>{{burger_name}}
+            <button data-id={{id}} class="eatBtn">Order again!</button>
+        </li>
+    {{/each}}
+</ul>
+
+
 
 <form>
     <label for="burgerName">Order a burger:</label>

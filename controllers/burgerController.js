@@ -10,7 +10,9 @@ const router = express.Router();
 router.get('/', (req, res) => {
 
     burger.getAll(burgers => {
-        res.render("index", {burgers})
+        const availableBurgers = burgers.filter(burger => !burger.eaten);
+        const eatenBurgers = burgers.filter(burger => burger.eaten);
+        res.render("index", {availableBurgers, eatenBurgers})
     })
 });
 
@@ -19,7 +21,10 @@ router.get('/', (req, res) => {
 router.put('/api/burger/:id', (req, res) => {
     const id = req.params.id;
     burger.update(id, (result) => {
-
+        if (result.changedRows === 0){
+            return res.status(404).end();
+        }
+        res.status(200).end();
     })
 });
 
