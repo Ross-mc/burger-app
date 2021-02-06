@@ -1,0 +1,35 @@
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: 'Sriracha', cursive;
+}
+
+.container {
+    display: flex;
+    flex-flow: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.flexEl {
+    flex: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+li{
+    list-style: none;
+    text-align: left;
+}
+
+@media (max-width: 1000px){
+    .container{
+        flex-direction: column;
+    }
+}

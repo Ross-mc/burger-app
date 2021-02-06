@@ -1,27 +1,33 @@
-<h1>Burgers!</h1>
+<h1 class="title">Burger Shack <i class="fas fa-hamburger"></i></h1>
 
-<h2>Available Burgers!</h2>
-<ul>
-    {{#each availableBurgers}}
-        <li>{{burger_name}}
-            <button data-id={{id}} data-eaten="true" class="eatBtn">Eat me!</button>
-        </li>
-    {{/each}}
-</ul>
-
-<h2>Previous Orders</h2>
-<ul>
-    {{#each eatenBurgers}}
-        <li>{{burger_name}}
-            <button data-id={{id}} data-eaten="false" class="eatBtn">Order again!</button>
-        </li>
-    {{/each}}
-</ul>
-
-
-
-<form>
-    <label for="burgerName">Order a burger:</label>
-    <input type="text" placeholder="Enter the name of your Burger" name="burgerName" id="burgerName">
-    <button id="orderBtn" type="submit">Order your burger!</button>
+<form class="container">
+    <div class="flexEl">
+        <input type="text" placeholder="Enter the name of your Burger" name="burgerName" id="burgerName">
+    </div>
+    <div class="flexEl">
+            <button id="orderBtn" type="submit">Order your burger!</button>
+    </div>
 </form>
+
+<div class="container">
+    <div class="flexEl" id="available">
+        <h2 class="orderHdr">Available Burgers!</h2>
+        <ul>
+            {{#each availableBurgers}}
+            <li>{{burger_name}}
+                <button data-id={{id}} data-eaten="true" class="eatBtn">Eat me!</button>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="flexEL">
+        <h2 class="orderHdr">Previous Orders</h2>
+        <ul>
+            {{#each eatenBurgers}}
+            <li>{{burger_name}}
+                <button data-id={{id}} data-eaten="false" class="eatBtn">Order again!</button>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
