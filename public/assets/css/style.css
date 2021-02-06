@@ -13,8 +13,8 @@ body {
     flex-flow: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 100px;
+    max-width: 1000px;
+    margin: 50px auto;
 }
 
 
@@ -24,18 +24,11 @@ body {
     margin-right: 5%;
 }
 
-#burgerName{
-    margin-left: 75%;
-    width: 200px;
+ul{
+    width: 75%;
+    max-width: 400px;
+    margin: 0 auto;
 }
-
-#orderBtn{
-    background-color: #f0932b;
-    border: 3px solid #333333;
-    border-radius: 4px;
-    margin-right: 70%;
-}
-
 
 li{
     list-style: none;
@@ -47,11 +40,4 @@ li{
         flex-direction: column;
     }
 
-    #burgerName {
-        margin-left: 5%;
-    }
-
-    #orderBtn {
-        margin-right: 5%;
-    }
 }
