@@ -1,31 +1,34 @@
-<h1 class="title">Burger Shack <i class="fas fa-hamburger"></i></h1>
+<div class="banner top"><h1 class="title">Burger Shack <i class="fas fa-hamburger"></i></h1></div>
+<div class="bg-img"></div>
 
-<form class="container">
+
+<form class="container" id="orderFrm">
     <div class="flexEl">
-        <input type="text" placeholder="Enter the name of your Burger" name="burgerName" id="burgerName">
+        <input type="text" placeholder="Enter the name of your Burger" name="burgerName" id="burgerName" size="30">
         <button id="orderBtn" type="submit">Order your burger!</button>
     </div>
 </form>
 
 <div class="container">
-    <div class="flexEl" id="available">
-        <h2 class="orderHdr">Available Burgers!</h2>
+    <div class="flexEl menu" id="available">
+        <h2 class="orderHdr">Ready to Eat!</h2>
         <ul>
             {{#each availableBurgers}}
             <li>{{burger_name}}
-                <button data-id={{id}} data-eaten="true" class="eatBtn">Eat me!</button>
+                <button data-id={{id}} data-eaten="true" class="eatBtn">Eat me! <i class="fas fa-utensils"></i></button>
             </li>
             {{/each}}
         </ul>
     </div>
-    <div class="flexEl">
+    <div class="flexEl menu">
         <h2 class="orderHdr">Previous Orders</h2>
         <ul>
             {{#each eatenBurgers}}
             <li>{{burger_name}}
-                <button data-id={{id}} data-eaten="false" class="eatBtn">Order again!</button>
+                <button data-id={{id}} data-eaten="false" class="eatBtn">Order again! <i class="fas fa-hamburger"></i></button>
             </li>
             {{/each}}
         </ul>
     </div>
 </div>
+<div class="banner bottom"></div>
