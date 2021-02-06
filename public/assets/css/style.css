@@ -14,12 +14,26 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    margin-top: 100px;
 }
+
 
 .flexEl {
     flex: 40%;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+#burgerName{
+    margin-left: 75%;
+    width: 200px;
+}
+
+#orderBtn{
+    background-color: #f0932b;
+    border: 3px solid #333333;
+    border-radius: 4px;
+    margin-right: 70%;
 }
 
 
@@ -31,5 +45,13 @@ li{
 @media (max-width: 1000px){
     .container{
         flex-direction: column;
+    }
+
+    #burgerName {
+        margin-left: 5%;
+    }
+
+    #orderBtn {
+        margin-right: 5%;
     }
 }
