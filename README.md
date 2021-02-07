@@ -17,6 +17,8 @@ A Full Stack Web Application using Node.js, Express.js and MySQL deployed on Her
 
 The application mimics a burger restaurant and the user can order new burgers or re order previous burgers.
 
+The application utilises a MVC design pattern and a ORM for handling MySQL queries with Node.js.
+
 Submitted as part of the University of Manchester Coding Bootcamp.
 
 ## Demonstration
