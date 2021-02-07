@@ -1,7 +1,6 @@
 # Burger Application
 
-https://shielded-escarpment-80973.herokuapp.com/
-
+[Live deployed page](https://shielded-escarpment-80973.herokuapp.com/)
       
 ## Contents
 
