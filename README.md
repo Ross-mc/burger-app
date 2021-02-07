@@ -24,7 +24,7 @@ Submitted as part of the University of Manchester Coding Bootcamp.
 ## Demonstration
 
 
-<img src="./public/assets/img/screenshots/Capture.jpg" height="225px" width="400px">
+<img src="https://user-images.githubusercontent.com/67362834/107147798-ddd12d80-6947-11eb-9f5a-cd97bdcef027.JPG" height="225px" width="400px">
 
 ## License
 
